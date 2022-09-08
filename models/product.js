@@ -19,10 +19,12 @@ const productSchema = new mongoose.Schema({
     },
     company: {
         type: String,
+        //enum below speciefy that only these companies will be selected 
         enum: {
             values: ['ikea', 'liddy', 'caressa', 'marcos'],
             message: '{Value} is not supported'
         }
     }
 })
+// first parameter will be the collection name in the database converted into lowercase
 module.exports = mongoose.model('Product', productSchema)

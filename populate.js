@@ -9,6 +9,7 @@ const start = async() =>{
         await ProductSchema.deleteMany()
         await ProductSchema.create(productsJSON)
         console.log('Sucess!! created products')
+        //process is global variable which will end the program after running the above lines
         process.exit(0)
     } catch (error) {
         console.log(error)
