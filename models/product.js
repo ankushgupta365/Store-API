@@ -24,7 +24,11 @@ const productSchema = new mongoose.Schema({
             values: ['ikea', 'liddy', 'caressa', 'marcos'],
             message: '{Value} is not supported'
         }
-    }
+    },
+    rating: {
+        type: Number,
+        default: 4.5,
+      },
 })
 // first parameter will be the collection name in the database converted into lowercase
 module.exports = mongoose.model('Product', productSchema)
